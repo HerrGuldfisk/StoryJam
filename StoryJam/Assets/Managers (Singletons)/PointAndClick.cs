@@ -6,6 +6,25 @@ using UnityEngine.EventSystems;
 
 public class PointAndClick : MonoBehaviour
 {
+	#region Singleton
+
+	public static PointAndClick Instance { get; private set; } = null;
+
+	private void Awake()
+	{
+		if (Instance != null && Instance != this)
+		{
+			Destroy(this.gameObject);
+			return;
+		}
+
+		Instance = this;
+		DontDestroyOnLoad(this.gameObject);
+	}
+
+	#endregion
+
+
 	private Vector2 currentMousePosition;
 
 	private bool isCursor;
