@@ -26,12 +26,14 @@ public class GlobalData : MonoBehaviour
 
 public enum current
 {
+	NONE = 1,
 	door1 = 0,
 	door2 = 1,
 }
 
 public enum goal
 {
+	NONE = 1,
 	door1 = 1,
 	door2 = 1
 }

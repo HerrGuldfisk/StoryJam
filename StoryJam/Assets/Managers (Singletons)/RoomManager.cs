@@ -40,7 +40,7 @@ public class RoomManager : MonoBehaviour
 	{
 		currentSceneId = scene.buildIndex;
 		CurrentRoom = FindObjectOfType<Room>();
-		Debug.Log("Current scsne is: " + scene.name);
+		Debug.Log("Current scene is: " + scene.name);
 	}
 
 }
