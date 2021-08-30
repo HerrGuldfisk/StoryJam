@@ -50,7 +50,7 @@ public class PointAndClick : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		hit = Physics2D.Raycast(currentMousePosition, -Vector2.up);
+		hit = Physics2D.Raycast(currentMousePosition, Vector2.zero);
 
 		if(hit.collider != null)
 		{
