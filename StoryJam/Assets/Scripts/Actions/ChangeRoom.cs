@@ -7,17 +7,19 @@ public class ChangeRoom : Action
 {
 	[SerializeField] private int roomId;
 
-	[SerializeField] private List<current> conditions;
+	[SerializeField] private List<goal> conditions;
+
 
 	public override void RunAction()
 	{
 		for (int i = 0; i < conditions.Count; i++)
 		{
-			int currentValue = (int)Enum.Parse(typeof(current), conditions[i].ToString());
+			int currentValue = GlobalData.current[(int)conditions[i]];
 			int goalValue = (int)Enum.Parse(typeof(goal), conditions[i].ToString());
 
 			if (currentValue < goalValue)
 			{
+
 				Debug.Log("Condition " + conditions[i].ToString() + " not met");
 				return;
 			}

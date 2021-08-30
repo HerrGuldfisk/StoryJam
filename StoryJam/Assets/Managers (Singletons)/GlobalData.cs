@@ -17,23 +17,30 @@ public class GlobalData : MonoBehaviour
 		}
 
 		Instance = this;
-		DontDestroyOnLoad(this.gameObject);
+		// DontDestroyOnLoad(this.gameObject);
 	}
 
 	#endregion
 
+	public static List<int> current = new List<int>
+	{
+		 0,
+		 0,
+		 4,
+	};
 }
 
-public enum current
-{
-	NONE = 1,
-	door1 = 0,
-	door2 = 1,
-}
 
 public enum goal
 {
-	NONE = 1,
+	NONE = 0,
 	door1 = 1,
-	door2 = 1
+	door2 = 4
+}
+
+public enum goalIndex
+{
+	NONE,
+	door1,
+	door2
 }

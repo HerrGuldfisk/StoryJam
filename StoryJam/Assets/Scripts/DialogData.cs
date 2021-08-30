@@ -7,7 +7,10 @@ public class DialogData : Action
 {
 	public string[] dialog;
 	public bool[] show;
-	public current[] conditions;
+	public goal[] conditionsNeeded;
+	public goalIndex[] conditionsToUpdate;
+
+	[HideInInspector] public bool done;
 
 	public override void RunAction()
 	{
