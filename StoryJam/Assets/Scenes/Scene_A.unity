@@ -382,13 +382,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34abfa2fbe8c18246b96a17dc487e57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - 'Gunter: Welcome to the mines.'
-  - 'Gunter: Could you be so kind as to jump down my shaft and examine why my small
-    workers ain''t working no more?'
+  dialog: []
   show: 0101
   conditionsNeeded: 0000000000000000
   conditionsToUpdate: 0000000001000000
+  startIndex: 0
+  UnmetCondition: 0
   done: 0
 --- !u!61 &451348989
 BoxCollider2D:

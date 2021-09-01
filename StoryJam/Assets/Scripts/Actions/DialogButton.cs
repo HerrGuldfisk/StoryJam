@@ -6,6 +6,6 @@ public class DialogButton : Action
 {
     public override void RunAction()
 	{
-		DialogManager.Instance.StartDialog(DialogManager.Instance.currentDialogData);
+		DialogManager.Instance.UpdateDialog();
 	}
 }

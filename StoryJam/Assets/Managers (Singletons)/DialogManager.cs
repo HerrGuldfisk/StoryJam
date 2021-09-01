@@ -43,6 +43,71 @@ public class DialogManager : MonoBehaviour
 
 	public void StartDialog(DialogData data)
 	{
+		currentDialogData = data;
+
+		// Check if the dialog is done, show default message.
+		if (data.done)
+		{
+			// Nothing more to do here...
+			UpdateDialog();
+			return;
+		}
+
+		if (data.UnmetCondition == goal.NONE)
+		{
+			UpdateDialog();
+		}
+
+		if ((int)data.UnmetCondition <= GlobalData.current[(int)Enum.Parse(typeof(goalIndex), data.UnmetCondition.ToString())])
+		{
+			// condition is met and should be updated.
+			data.UpdateStartPosition();
+
+
+		}
+
+		UpdateDialog();
+	}
+
+	public void UpdateDialog()
+	{
+
+	}
+
+	private void EndDialog()
+	{
+		RemovePickUp();
+
+		currentDialogData = null;
+		ToggleDialog();
+		// remove current dialog
+	}
+
+	private void RemovePickUp()
+	{
+		if(currentDialogData.gameObject.tag == "PickUp")
+		{
+			Destroy(currentDialogData.gameObject);
+		}
+	}
+
+	public void ToggleDialog()
+	{
+		if (isActive)
+		{
+			dialogCanvas.gameObject.SetActive(false);
+			isActive = false;
+		}
+		else
+		{
+			dialogCanvas.gameObject.SetActive(true);
+			isActive = true;
+		}
+	}
+
+	/*
+	public void StartDialog(DialogData data)
+	{
 		if (turnOff)
 		{
 			ToggleDialog();
@@ -59,10 +124,10 @@ public class DialogManager : MonoBehaviour
 		{
 			if (data.show[i])
 			{
-				/*
+
 				int currentValue = (int)Enum.Parse(typeof(current), data.conditionsNeeded[i].ToString());
 				int goalValue = (int)Enum.Parse(typeof(goal), data.conditionsNeeded[i].ToString());
-				*/
+
 
 
 				if(GlobalData.current[(int)Enum.Parse(typeof(goalIndex), data.conditionsNeeded[i].ToString())] < (int)data.conditionsNeeded[i])
@@ -71,7 +136,6 @@ public class DialogManager : MonoBehaviour
 					turnOff = true;
 					// Return dialog hmm nothing to do here...
 					Debug.Log("Am I missing something... (Conditions not met)");
-
 					return;
 				}
 				else
@@ -97,25 +161,14 @@ public class DialogManager : MonoBehaviour
 		{
 			turnOff = true;
 			textBox.text = "Nothing more to do here.";
-			Debug.Log("Nothing more to do here... (End of dialog)");
+			// Debug.Log("Nothing more to do here... (End of dialog)");
 		}
 		else
 		{
 			ToggleDialog();
 		}
 	}
+	*/
 
-	public void ToggleDialog()
-	{
-		if (isActive)
-		{
-			dialogCanvas.gameObject.SetActive(false);
-			isActive = false;
-		}
-		else
-		{
-			dialogCanvas.gameObject.SetActive(true);
-			isActive = true;
-		}
-	}
+
 }
