@@ -382,13 +382,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34abfa2fbe8c18246b96a17dc487e57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: []
-  show: 0101
-  conditionsNeeded: 0000000000000000
-  conditionsToUpdate: 0000000001000000
-  startIndex: 0
+  dialog:
+  - test
+  - test 2
+  - test 3
+  - test 4
+  - test 5
+  defaultMessage: 
+  conditionsNeeded: 0000000000000000010000000000000000000000
+  conditionsToUpdate: 0100000000000000000000000000000000000000
   UnmetCondition: 0
+  startIndex: 0
+  currentIndex: 0
   done: 0
+  show: 0101
 --- !u!61 &451348989
 BoxCollider2D:
   m_ObjectHideFlags: 0

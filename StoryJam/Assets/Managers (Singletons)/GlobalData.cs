@@ -26,7 +26,7 @@ public class GlobalData : MonoBehaviour
 	{
 		 0,
 		 0,
-		 0,
+		 2,
 	};
 }
 
@@ -35,12 +35,12 @@ public enum goal
 {
 	NONE = 0,
 	door1 = 1,
-	door2 = 1
+	door2 = 2,
 }
 
 public enum goalIndex
 {
 	NONE,
 	door1,
-	door2
+	door2,
 }

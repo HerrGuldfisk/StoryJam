@@ -7,14 +7,17 @@ public class DialogData : Action
 {
 
 	public List<string> dialog = new List<string>();
-	public bool[] show;
+
+	public string defaultMessage = null;
+
 	public goal[] conditionsNeeded;
 	public goalIndex[] conditionsToUpdate;
-
-	[HideInInspector] public int startIndex = 0;
 	public goal UnmetCondition;
 
+	[HideInInspector] public int startIndex = 0;
+	[HideInInspector] public int currentIndex = 0;
 	[HideInInspector] public bool done;
+	[HideInInspector] public bool[] show;
 
 	private void Start()
 	{
