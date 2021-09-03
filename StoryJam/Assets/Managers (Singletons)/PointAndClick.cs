@@ -54,7 +54,7 @@ public class PointAndClick : MonoBehaviour
 
 		if(hit.collider != null)
 		{
-			if(hit.collider.gameObject.tag == "Interactable")
+			if(hit.collider.gameObject.tag == "Interactable" || hit.collider.gameObject.tag == "PickUp")
 			{
 				SetCursor(false);
 			}
@@ -97,6 +97,11 @@ public class PointAndClick : MonoBehaviour
 
 			if (hit.collider != null)
 			{
+				if (hit.collider.gameObject.tag == "PickUp")
+				{
+					hit.collider.GetComponent<PickUp>().RunAction();
+				}
+
 				if (hit.collider.gameObject.tag == "Interactable")
 				{
 					hit.collider.GetComponent<Action>().RunAction();

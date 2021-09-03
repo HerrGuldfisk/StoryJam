@@ -90,7 +90,7 @@ public class DialogManager : MonoBehaviour
 			}*/
 		}
 	}
-	
+
 	public void NextDialog()
 	{
 		if(textindex < currentDialogData.conditionsNeeded.Length)
@@ -102,7 +102,7 @@ public class DialogManager : MonoBehaviour
 			EndDialog();
 			return;
 		}
-		
+
 		if(currentDialogData.conditionsToUpdate[textindex] != goalIndex.NONE)
 		{
 			GlobalData.current[(int)currentDialogData.conditionsToUpdate[textindex]] += 1;
@@ -142,6 +142,11 @@ public class DialogManager : MonoBehaviour
 		}
 
 		currentDialogData.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+		if (currentDialogData.gameObject.GetComponent<PickUp>() && currentDialogData.gameObject.GetComponent<PickUp>().destroyAfter == true)
+		{
+			Destroy(currentDialogData.gameObject);
+		}
 	}
 
 	public void ToggleDialog()
@@ -180,9 +185,9 @@ public class DialogManager : MonoBehaviour
 			ToggleDialog();
 			UpdateText(currentDialogData.dialog[0]);
 		}
-		
 
-		if (data.UnmetCondition == goal.NONE || 
+
+		if (data.UnmetCondition == goal.NONE ||
 			GlobalData.current[(int)Enum.Parse(typeof(goalIndex), data.UnmetCondition.ToString())] < (int)data.UnmetCondition)
 		{
 			UpdateDialog();
@@ -193,7 +198,7 @@ public class DialogManager : MonoBehaviour
 		{
 			data.UpdateStartPosition();
 			UpdateDialog();
-		}		
+		}
 	}
 
 	public void UpdateDialog()
@@ -216,7 +221,7 @@ public class DialogManager : MonoBehaviour
 		{
 			UpdateText(currentDialogData.dialog[0]);
 
-			
+
 		}
 
 
@@ -246,9 +251,9 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 
-	
+
 	*/
-	
+
 	/*
 	public void StartDialog(DialogData data)
 	{

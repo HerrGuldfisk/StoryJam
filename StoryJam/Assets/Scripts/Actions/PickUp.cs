@@ -4,23 +4,10 @@ using UnityEngine;
 
 public class PickUp : Action
 {
-
-	public goalIndex[] conditionsToUpdate;
+	public bool destroyAfter;
 
 	public override void RunAction()
 	{
-		UpdateConditions();
-
-		Debug.Log("Journal entry?");
-
-		Destroy(this.gameObject);
-	}
-
-	private void UpdateConditions()
-	{
-		for(int i = 0; i<conditionsToUpdate.Length; i++)
-		{
-			GlobalData.current[(int)conditionsToUpdate[i]] += 1;
-		}
+		GetComponent<DialogData>().RunAction();
 	}
 }

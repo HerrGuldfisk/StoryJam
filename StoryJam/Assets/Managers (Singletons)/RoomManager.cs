@@ -28,19 +28,11 @@ public class RoomManager : MonoBehaviour
 
 	public void Start()
 	{
-		SceneManager.sceneLoaded += OnSceneLoaded;
+
 	}
 
 	public void ChangeRoom(int id)
 	{
-		SceneManager.LoadSceneAsync(id);
+		Camera.main.transform.position = new Vector3(id * 25, 0, -10);
 	}
-
-	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-	{
-		currentSceneId = scene.buildIndex;
-		CurrentRoom = FindObjectOfType<Room>();
-		Debug.Log("Current scene is: " + scene.name);
-	}
-
 }
