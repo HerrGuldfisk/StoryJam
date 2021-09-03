@@ -27,6 +27,10 @@ public class GlobalData : MonoBehaviour
 		 0,
 		 0,
 		 2,
+		 2,
+		 3,
+		 4,
+		 5,
 	};
 }
 
@@ -36,6 +40,10 @@ public enum goal
 	NONE = 0,
 	door1 = 1,
 	door2 = 2,
+	elevator5 = 3,
+	room_8 = 4,
+	rickyDead = 5,
+	scared = 6,
 }
 
 public enum goalIndex
@@ -43,4 +51,8 @@ public enum goalIndex
 	NONE,
 	door1,
 	door2,
+	elevator5,
+	room_8,
+	rickyDead,
+	scared,
 }

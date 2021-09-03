@@ -531,8 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eadc6e21f15dc94da3dc41f886d05e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 2965459fa52c1fe439250890b9f84691, type: 3}
-  pointerTexture: {fileID: 2800000, guid: 419bab94344d42044a44a4accc360923, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 1739509f371f817428207097ba0c3207, type: 3}
+  pointerTexture: {fileID: 2800000, guid: 7a24aab705a893b479b6f88d88c7a3c4, type: 3}
 --- !u!114 &8632133644631565167
 MonoBehaviour:
   m_ObjectHideFlags: 0
