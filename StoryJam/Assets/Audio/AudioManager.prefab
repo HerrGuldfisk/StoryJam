@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2458488989152370946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2458488989152370956}
+  - component: {fileID: 2458488989152370957}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2458488989152370956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458488989152370946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.805446, y: 0.1215485, z: -39.137238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2458488989152370957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458488989152370946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd617cb3c7df3d94d99e872ec18c241a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: percs
+    clip: {fileID: 8300000, guid: 6cb3a3f3a89225d478a61da0c3fc4c5a, type: 3}
+    channel: {fileID: -6457931958452085021, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: rythmDrums
+    clip: {fileID: 8300000, guid: a20e8f495dabb08459d26a4f7b42b885, type: 3}
+    channel: {fileID: -6457931958452085021, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: allDrums
+    clip: {fileID: 8300000, guid: 33c3e22696455734a968d9283baa62fc, type: 3}
+    channel: {fileID: -6457931958452085021, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: allSound
+    clip: {fileID: 8300000, guid: 6f47a53b2f5c47c46bdff2c94a71dff3, type: 3}
+    channel: {fileID: -6457931958452085021, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: allSound2
+    clip: {fileID: 8300000, guid: 2e8fde139c2c60e438a56970af4d25b3, type: 3}
+    channel: {fileID: -6457931958452085021, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: allSound3
+    clip: {fileID: 8300000, guid: 5e1a26fda0985304280f56dbb471ac1b, type: 3}
+    channel: {fileID: -6457931958452085021, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: elevator
+    clip: {fileID: 8300000, guid: af7a05f4497c1574c95e49352cde55d0, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: machine
+    clip: {fileID: 8300000, guid: 73a88839fa8e51a45a5611e68fb4fb65, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: machine2
+    clip: {fileID: 8300000, guid: 4a66db28f761ad54bbbee605c24efc44, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: steps
+    clip: {fileID: 8300000, guid: f0e244e320de7d04fabfabe66aae5751, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: steps2
+    clip: {fileID: 8300000, guid: ff0092f472e2b4f488d57d710fd5579e, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: steps3
+    clip: {fileID: 8300000, guid: 6403074c461dbe2419c5da6c8dd46abf, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  mainMixer: {fileID: 24100000, guid: f229246de7e9f2941b603849aff9a845, type: 2}
