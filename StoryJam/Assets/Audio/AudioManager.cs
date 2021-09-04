@@ -54,14 +54,14 @@ public class AudioManager : MonoBehaviour
 		}
 		s.source.loop = loop;
 
-		if(rampTime > 0)
-		{
-			PlaySoundRampClip(s, rampTime);
-		}
-		else
-		{
-			s.source.Play();
-		}
+        if (rampTime > 0)
+        {
+            PlaySoundRampClip(s, rampTime);
+        }
+        else
+        {
+            s.source.Play();
+        }
 	}
 
 	public AudioSource GetAudioSource(string name)
@@ -194,5 +194,4 @@ public class AudioManager : MonoBehaviour
 		}
 		SetMixerVolume(mixer, targetVolume);
 	}
-
 }

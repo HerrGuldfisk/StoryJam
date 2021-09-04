@@ -128,4 +128,95 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: foreman
+    clip: {fileID: 8300000, guid: 5c98c43b5f091864693ce1d0aef8b2ea, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: foreman2
+    clip: {fileID: 8300000, guid: aba7903f38368cf43af47ed387dc8381, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: grunt
+    clip: {fileID: 8300000, guid: 796205e1e4add0c43b879656c0fcefd4, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: grunt2
+    clip: {fileID: 8300000, guid: 8621b992c6b6bf341adbac49a7831be4, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: heyhao
+    clip: {fileID: 8300000, guid: 47e939d765a5bab42a65f7f9c502e5af, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: jojo
+    clip: {fileID: 8300000, guid: 7536afd5a2769d549b5037207bd8ce92, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: longGrunt
+    clip: {fileID: 8300000, guid: 0975bcc76879cc24db2ecaed584b5cf8, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: longGrunt2
+    clip: {fileID: 8300000, guid: 1f0b048977412604581fd9a730932a5b, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: longMjao
+    clip: {fileID: 8300000, guid: c71d23c1c6f441341b55e9d922b9535b, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: mjamjo
+    clip: {fileID: 8300000, guid: dac8ded3ad9aacf4e9a6a80add78137e, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: mjo
+    clip: {fileID: 8300000, guid: d65ea64a4f65c6e4390b9cb45c22a3a2, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: mrja
+    clip: {fileID: 8300000, guid: c7cfb83abb2b2cc4e84bc4857c80459f, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: nja
+    clip: {fileID: 8300000, guid: f005d7c90d3005c4ebf3e280116960e6, type: 3}
+    channel: {fileID: -5248779768134238144, guid: f229246de7e9f2941b603849aff9a845, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   mainMixer: {fileID: 24100000, guid: f229246de7e9f2941b603849aff9a845, type: 2}

@@ -14,6 +14,8 @@ public class DialogData : Action
 	public goalIndex[] conditionsToUpdate;
 	public goal UnmetCondition;
 
+    public string[] voices;
+
 	[HideInInspector] public int startIndex = 0;
 	[HideInInspector] public int currentIndex = 0;
 	[HideInInspector] public bool done;

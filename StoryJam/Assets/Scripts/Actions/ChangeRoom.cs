@@ -9,8 +9,10 @@ public class ChangeRoom : Action
 
 	[SerializeField] private List<goal> conditions;
 
-
-	public override void RunAction()
+    // TransitionSounds
+    [SerializeField] public string soundEffect;
+    
+    public override void RunAction()
 	{
 		for (int i = 0; i < conditions.Count; i++)
 		{
@@ -24,7 +26,6 @@ public class ChangeRoom : Action
 				return;
 			}
 		}
-
-		RoomManager.Instance.ChangeRoom(roomId);
+        RoomManager.Instance.ChangeRoom(roomId, soundEffect);
 	}
 }

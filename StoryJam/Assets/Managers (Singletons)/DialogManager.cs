@@ -42,14 +42,22 @@ public class DialogManager : MonoBehaviour
 	private bool isActive;
 	int textindex = 0;
 
+    private bool playing;
+    private string voice;
+
 	public void StartDialog(DialogData data)
 	{
-		currentDialogData = data;
+        currentDialogData = data;
 		ToggleDialog();
 		textBox.text = data.dialog[0];
 		textindex = 0;
 
-		currentDialogData.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        if (playing == false)
+        {
+            StartCoroutine("playVoice");
+        }
+
+        currentDialogData.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
 		// Only have update conditoin on index 0 for pick ups.
 		if(currentDialogData.conditionsToUpdate[textindex] != goalIndex.NONE)
@@ -121,7 +129,11 @@ public class DialogManager : MonoBehaviour
 		}
 		else
 		{
-			textindex++;
+            if (playing == false)
+            {
+                StartCoroutine("playVoice");
+            }
+            textindex++;
 		}
 	}
 
@@ -163,8 +175,28 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 
-	# region Shitty old stuff
-	/*
+    IEnumerator playVoice()
+    {
+        playing = true;
+
+        voice = currentDialogData.voices[UnityEngine.Random.Range(0, currentDialogData.voices.Length)];
+
+        AudioManager.Instance.PlayAudio(voice);
+        yield return new WaitForSeconds(AudioManager.Instance.GetAudioSource(voice).clip.length);
+
+        playing = false;
+    }
+
+    /*
+    private void PlayRandomVoice()
+    {
+        // Find the audiomanager, look in the dialogdata for list of voices saved as strings, randomize voice using length of list
+        AudioManager.Instance.PlayAudio(currentDialogData.voices[UnityEngine.Random.Range(0, currentDialogData.voices.Length)]);
+    }
+    */
+
+    #region Shitty old stuff
+    /*
 	private bool turnOff;
 
 	private int currentIndex = 0;
@@ -254,7 +286,7 @@ public class DialogManager : MonoBehaviour
 
 	*/
 
-	/*
+    /*
 	public void StartDialog(DialogData data)
 	{
 		if (turnOff)
@@ -318,6 +350,6 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 	*/
-	#endregion
+    #endregion
 
 }
