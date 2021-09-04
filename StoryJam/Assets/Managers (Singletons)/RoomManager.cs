@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class RoomManager : MonoBehaviour
 {
@@ -24,7 +25,6 @@ public class RoomManager : MonoBehaviour
 	#endregion
 
 	public int currentSceneId;
-	public Room CurrentRoom;
 
     private string[] steps = { "steps", "steps2", "steps3" };
     private string[] musicLoops = { "percs", "rythmDrums", "allDrums", "allSound", "allSound2", "allSound3" };
@@ -37,14 +37,20 @@ public class RoomManager : MonoBehaviour
     bool playingCurrentMusic = false;
     bool playNext;
 
-    public void Start()
-	{
+	private UnityEvent RoomChanged = new UnityEvent();
+	public List<DialogData> dialogHolder = new List<DialogData>();
 
+	public void Start()
+	{
+		RoomChanged.AddListener(RoomChange);
 	}
+
 
 	public void ChangeRoom(int id, string soundEffect)
 	{
-        // Add some type of transition animation?
+		// Add some type of transition animation?
+
+		currentSceneId = id;
 
         if (playingTransitionSound == false)
         {
@@ -96,8 +102,22 @@ public class RoomManager : MonoBehaviour
 
         // Add check if id exists
         Camera.main.transform.position = new Vector3(id * 25, 0, -10);
+		RoomChanged.Invoke();
 	}
-    IEnumerator playTransitionSound()
+
+	private void RoomChange()
+	{
+		if (currentSceneId == 9)
+		{
+			dialogHolder[0].RunAction();
+		}
+		else if (currentSceneId == 15)
+		{
+			dialogHolder[1].RunAction();
+		}
+	}
+
+	IEnumerator playTransitionSound()
     {
         playingTransitionSound = true;
 

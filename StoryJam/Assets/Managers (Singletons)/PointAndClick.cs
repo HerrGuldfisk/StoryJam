@@ -91,7 +91,6 @@ public class PointAndClick : MonoBehaviour
 
 		if (clicked == 1)
 		{
-
 			// if dialogue is open, progress?
 			// else below
 
@@ -104,7 +103,17 @@ public class PointAndClick : MonoBehaviour
 
 				if (hit.collider.gameObject.tag == "Interactable")
 				{
-					hit.collider.GetComponent<Action>().RunAction();
+					if(hit.collider.GetComponent<ChangeRoom>() != null && DialogManager.Instance.isActive)
+					{
+						FindObjectOfType<DialogButton>().RunAction();
+					}
+					else
+					{
+						hit.collider.GetComponent<Action>().RunAction();
+					}
+
+
+
 				}
 			}
 

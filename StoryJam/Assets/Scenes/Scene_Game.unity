@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 9
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &47693377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -241,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 12
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &52975333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -353,6 +355,8 @@ MonoBehaviour:
   conditionsNeeded: 0000000000000000
   conditionsToUpdate: 0000000003000000
   UnmetCondition: 0
+  voices:
+  - mjo
   startIndex: 0
   currentIndex: 0
   done: 0
@@ -415,6 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 1
   conditions: 01000000
+  soundEffect: 
 --- !u!61 &67845721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -501,6 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 3
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &216433132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -607,6 +613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 2
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &255782183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -679,6 +686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 7
   conditions: 04000000
+  soundEffect: 
 --- !u!61 &272356537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -784,6 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 4
   conditions: 03000000
+  soundEffect: 
 --- !u!61 &344405346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -856,6 +865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 4
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &359416933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1011,6 +1021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 10
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &395224725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1184,6 +1195,9 @@ MonoBehaviour:
   conditionsNeeded: 000000000000000000000000
   conditionsToUpdate: 000000000000000001000000
   UnmetCondition: 0
+  voices:
+  - foreman
+  - foreman2
   startIndex: 0
   currentIndex: 0
   done: 0
@@ -1389,6 +1403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 15
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &535623182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1531,6 +1546,112 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &578734336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578734337}
+  - component: {fileID: 578734339}
+  - component: {fileID: 578734338}
+  m_Layer: 0
+  m_Name: Dialog15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &578734337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578734336}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.56999207, y: 6.4716887, z: -1.2791103}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 717763935}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &578734338
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578734336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &578734339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578734336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34abfa2fbe8c18246b96a17dc487e57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+  - 'Mother: Hello there, mr "inspector"'
+  - 'Mother: I assume Gunther sent you here to investigate what is going on with
+    the deliveries'
+  - 'Mother: you are not the first one to get that mission you know'
+  - 'Mother: And i''m sorry to tell you that I cannot let you return to the surface'
+  - 'Mother: I''m sure you understand that we wouldn''t want anyone up there to know
+    about the things we are doing down here'
+  - 'Mother: We have a little paradise here that we wouldn''t want anyone to ruin'
+  - 'Mother: You see, the gemstones down here carry an energy that the world is not
+    ready for yet'
+  - 'Mother: We are slowly learning its powers, and how we can use it to become stronger,
+    healthier, and happier'
+  - 'Mother: But it must stay a secret for now'
+  - 'Mother: ...'
+  - 'Mother: I will give you a choice...'
+  - 'Mother: Join us, and take part in our journey towards uncovering the secret
+    powers of these gems!'
+  - 'Mother: Down here, you can thrive and become the ultimate version of yourself'
+  - 'Mother: Refuse, however, and you leave us no choice but to stop you in any attempt
+    to reach back to the surface'
+  - 'Mother: What will it be?'
+  - 'Mother: The choice is yours, inspector'
+  defaultMessage: 
+  conditionsNeeded: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  conditionsToUpdate: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  UnmetCondition: 0
+  voices:
+  - longGrunt
+  - longGrunt2
+  - grunt
+  - grunt2
+  startIndex: 0
+  currentIndex: 0
+  done: 0
+  show: 
 --- !u!1 &662763694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 7
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &696702352
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1669,6 +1791,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &717763934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717763935}
+  m_Layer: 0
+  m_Name: DialogHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717763935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717763934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 225, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 983490245}
+  - {fileID: 578734337}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724319170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 12
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &931367461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2004,6 +2159,93 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931367458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &983490244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983490245}
+  - component: {fileID: 983490246}
+  - component: {fileID: 983490247}
+  m_Layer: 0
+  m_Name: Dialog9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &983490245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983490244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 10.88, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 717763935}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &983490246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983490244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34abfa2fbe8c18246b96a17dc487e57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+  - 'left person: you have betrayed the trust of the mother, for this you must pay'
+  - 'right person: I''m sorry I have to do this Ricky, but your betrayal leaves me
+    no choice'
+  - 'Ricky: Oh my lord... Please! I can explain!'
+  - 'right person: goodbye..'
+  - I have to get out of here! Better turn back towards the entrance
+  defaultMessage: 
+  conditionsNeeded: 0000000000000000000000000000000000000000
+  conditionsToUpdate: 0000000000000000000000000000000005000000
+  UnmetCondition: 0
+  voices:
+  - jojo
+  startIndex: 0
+  currentIndex: 0
+  done: 0
+  show: 
+--- !u!61 &983490247
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983490244}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2152,6 +2394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 5
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1006199769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2257,6 +2500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 3
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1130277356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2264,78 +2508,6 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130277353}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!1 &1142941600
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1142941601}
-  - component: {fileID: 1142941603}
-  - component: {fileID: 1142941602}
-  m_Layer: 0
-  m_Name: Passage->11
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1142941601
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142941600}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.23, y: -2.37, z: 0}
-  m_LocalScale: {x: 3.74, y: 2.04, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1394216330}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1142941602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142941600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefd36b5cefcc354a96ed8172a1adb3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomId: 11
-  conditions: 00000000
---- !u!61 &1142941603
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142941600}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2401,6 +2573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 1
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1160586986
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2473,6 +2646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 14
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1191901301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2545,6 +2719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 11
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1198293332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2617,6 +2792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 13
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1283870229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2789,7 +2965,6 @@ Transform:
   - {fileID: 1003475613}
   - {fileID: 1869397023}
   - {fileID: 1581959642}
-  - {fileID: 1142941601}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2871,6 +3046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 2
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1473617924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2943,6 +3119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 4
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1490648238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3098,6 +3275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 8
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1548416545
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3170,6 +3348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 6
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1555927396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3325,6 +3504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 8
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1581959644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3480,6 +3660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 6
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1632036265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3539,6 +3720,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1721496380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2458488989152370946, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.805446
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1215485
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -39.137238
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
 --- !u!1 &1740177503
 GameObject:
   m_ObjectHideFlags: 0
@@ -3668,6 +3906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 8
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1758447583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3755,6 +3994,10 @@ MonoBehaviour:
   conditionsNeeded: 0000000000000000000000000000000000000000000000000000000000000000
   conditionsToUpdate: 0000000000000000000000000000000000000000000000000000000004000000
   UnmetCondition: 0
+  voices:
+  - mrja
+  - nja
+  - longMjao
   startIndex: 0
   currentIndex: 0
   done: 0
@@ -3847,6 +4090,9 @@ MonoBehaviour:
   conditionsNeeded: 0000000000000000000000000000000000000000050000000000000000000000000000000000000000000000
   conditionsToUpdate: 0000000000000000000000000000000000000000000000000000000000000000000000000000000006000000
   UnmetCondition: 0
+  voices:
+  - mjamjo
+  - jojo
   startIndex: 0
   currentIndex: 0
   done: 0
@@ -4006,6 +4252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 13
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &1873797819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4049,7 +4296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1908654591
 Transform:
   m_ObjectHideFlags: 0
@@ -4103,6 +4350,7 @@ MonoBehaviour:
   conditionsNeeded: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   conditionsToUpdate: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   UnmetCondition: 0
+  voices: []
   startIndex: 0
   currentIndex: 0
   done: 0
@@ -4295,6 +4543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 8
   conditions: 00000000
+  soundEffect: 
 --- !u!61 &2045286975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4662,5 +4911,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8632133645479045670, guid: 61f07a295d9862f47902e2d7a22e1600, type: 3}
+      propertyPath: dialogHolder.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632133645479045670, guid: 61f07a295d9862f47902e2d7a22e1600, type: 3}
+      propertyPath: dialogHolder.Array.data[0]
+      value: 
+      objectReference: {fileID: 983490246}
+    - target: {fileID: 8632133645479045670, guid: 61f07a295d9862f47902e2d7a22e1600, type: 3}
+      propertyPath: dialogHolder.Array.data[1]
+      value: 
+      objectReference: {fileID: 578734339}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61f07a295d9862f47902e2d7a22e1600, type: 3}

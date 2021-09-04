@@ -39,11 +39,13 @@ public class DialogManager : MonoBehaviour
 	private TextMeshProUGUI textBox;
 	private Canvas dialogCanvas;
 	public DialogData currentDialogData;
-	private bool isActive;
+	[HideInInspector] public bool isActive;
 	int textindex = 0;
 
     private bool playing;
     private string voice;
+
+	private bool beenScared;
 
 	public void StartDialog(DialogData data)
 	{
@@ -151,6 +153,12 @@ public class DialogManager : MonoBehaviour
 		else
 		{
 			ToggleDialog();
+		}
+
+		if (GlobalData.current[6] >= 6 && beenScared == false)
+		{
+			beenScared = true;
+			RoomManager.Instance.ChangeRoom(11, "steps2");
 		}
 
 		currentDialogData.gameObject.GetComponent<BoxCollider2D>().enabled = true;
