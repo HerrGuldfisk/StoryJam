@@ -31,6 +31,8 @@ public class GlobalData : MonoBehaviour
 		 3,
 		 4,
 		 5,
+		 0,
+		 7,
 	};
 }
 
@@ -44,6 +46,8 @@ public enum goal
 	room_8 = 4,
 	rickyDead = 5,
 	scared = 6,
+	neverDone = 7,
+	finalChoice = 8,
 }
 
 public enum goalIndex
@@ -55,4 +59,6 @@ public enum goalIndex
 	room_8,
 	rickyDead,
 	scared,
+	neverDone,
+	finalChoice,
 }

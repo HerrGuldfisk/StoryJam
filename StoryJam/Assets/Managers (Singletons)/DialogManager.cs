@@ -26,7 +26,12 @@ public class DialogManager : MonoBehaviour
 
 	private void Start()
 	{
-		textBox = FindObjectOfType<TextMeshProUGUI>();
+		choiceScreen.gameObject.SetActive(false);
+
+		for (int i = 0; i < endingScreens.Length; i++)
+		{
+			endingScreens[i].gameObject.SetActive(false);
+		}
 
 		Canvas tempCanvas = FindObjectOfType<Canvas>();
 		if(tempCanvas.gameObject.tag == "DialogCanvas")
@@ -35,8 +40,11 @@ public class DialogManager : MonoBehaviour
 			dialogCanvas.gameObject.SetActive(false);
 		}
 	}
+	public TextMeshProUGUI textBox;
 
-	private TextMeshProUGUI textBox;
+	public Canvas choiceScreen;
+	public Canvas[] endingScreens;
+
 	private Canvas dialogCanvas;
 	public DialogData currentDialogData;
 	[HideInInspector] public bool isActive;
@@ -70,20 +78,28 @@ public class DialogManager : MonoBehaviour
 		bool stop = false;
 		for(int i = textindex; i<currentDialogData.conditionsNeeded.Length && !stop; i++)
 		{
+			if (stop)
+			{
+				stop = false;
+				return;
+			}
+
 			if(GlobalData.current[(int)Enum.Parse(typeof(goalIndex), data.conditionsNeeded[i].ToString())] < (int)data.conditionsNeeded[i])
 			{
-				for(int j=i-1; j > 0 ; j--)
+				stop = true;
+
+				for (int j=i-1; j > 0 ; j--)
 				{
 					if(currentDialogData.conditionsNeeded[j] != goal.NONE)
 					{
 						textindex = j;
-						stop = true;
-						break;
+						return;
 					}
 				}
 			}
 		}
-		if(textindex == 0)
+
+		if (textindex == 0)
 		{
 			textindex++;
 			/*for(int i = currentDialogData.conditionsNeeded.Length - 1 ; i > 0 ; i--)
@@ -139,6 +155,9 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 
+	private bool madeChoice;
+
+
 	private void EndDialog()
 	{
 		if(currentDialogData.done)
@@ -159,6 +178,13 @@ public class DialogManager : MonoBehaviour
 		{
 			beenScared = true;
 			RoomManager.Instance.ChangeRoom(11, "steps2");
+		}
+
+		if (GlobalData.current[8] >= 8 && madeChoice == false)
+		{
+			madeChoice = true;
+			choiceScreen.gameObject.SetActive(true);
+			choiceScreen.GetComponent<DeactivateCanvases>().canvases[0].gameObject.SetActive(true);
 		}
 
 		currentDialogData.gameObject.GetComponent<BoxCollider2D>().enabled = true;
