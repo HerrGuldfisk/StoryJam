@@ -70,19 +70,16 @@ public class RoomManager : MonoBehaviour
             StartCoroutine("playTransitionSound");
         }
 
-        if (id == 1)// && !myQueue.Contains(musicLoops[0]))
+        if (id == 1)
         {
-            //myQueue.Enqueue(musicLoops[0]);
-            //AudioManager.Instance.GetAudioSource(musicLoops[0]).Stop();
             AudioManager.Instance.PlayAudio(musicLoops[0], true);
         }
-        else if (id == 4)// && !myQueue.Contains(musicLoops[1]))
+        else if (id == 4)
         {
-            //myQueue.Enqueue(musicLoops[1]);
             AudioManager.Instance.GetAudioSource(musicLoops[0]).Stop();
             AudioManager.Instance.PlayAudio(musicLoops[1], true);
         }
-        else if (id == 9)// && !myQueue.Contains(musicLoops[2]))
+        else if (id == 9)
         {
             AudioManager.Instance.GetAudioSource(musicLoops[1]).Stop();
             AudioManager.Instance.PlayAudio(musicLoops[2], true);
@@ -97,46 +94,6 @@ public class RoomManager : MonoBehaviour
             AudioManager.Instance.GetAudioSource(musicLoops[3]).Stop();
             AudioManager.Instance.PlayAudio(musicLoops[4], true);
         }
-
-        /*if (myQueue.Count > 1 || playNext == true)
-        {
-            playNext = false;
-            StartCoroutine(playCurrentMusic());
-        }*/
-
-        /*
-        if (playingCurrentMusic == false)
-        {
-            if (id < 3)
-            {
-                currentMusic = musicLoops[0];
-                if (id == 2)
-                {
-                    nextMusic = musicLoops[1];
-                    playNext = true;
-                }
-            }
-            else if (id < 5)
-            {
-                currentMusic = musicLoops[1];
-                if (id == 4)
-                {
-                    nextMusic = musicLoops[2];
-                    playNext = true;
-                }
-            }
-            else if (id < 10)
-            {
-                currentMusic = musicLoops[2];
-                if (id == 9)
-                {
-                    nextMusic = musicLoops[3];
-                    playNext = true;
-                }
-            }
-
-            StartCoroutine(playCurrentMusic(playNext));
-        }*/
 
         // Add check if id exists
         Camera.main.transform.position = new Vector3(id * 25, 0, -10);
@@ -179,24 +136,6 @@ public class RoomManager : MonoBehaviour
         playingTransitionSound = false;
     }
 
-    /*
-    IEnumerator playCurrentMusic(bool playNext)
-    {
-        playingCurrentMusic = true;
-
-        AudioManager.Instance.PlayAudio(currentMusic, true);
-        yield return new WaitForSecondsRealtime(AudioManager.Instance.GetAudioSource(currentMusic).clip.length);
-
-        if (playNext == true)
-        {
-            AudioManager.Instance.GetAudioSource(currentMusic).Stop();
-            AudioManager.Instance.PlayAudio(nextMusic, true);
-            playNext = false;
-        }
-
-        playingCurrentMusic = false;
-    }
-    */
 
     IEnumerator playCurrentMusic()
     {
