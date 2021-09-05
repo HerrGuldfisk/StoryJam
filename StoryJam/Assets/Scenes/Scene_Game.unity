@@ -3446,7 +3446,10 @@ MonoBehaviour:
   conditionsNeeded: 00000000000000000000000000000000
   conditionsToUpdate: 00000000000000000000000000000000
   UnmetCondition: 0
-  voices: []
+  voices:
+  - grunt
+  - mjamjo
+  - mrja
   startIndex: 0
   currentIndex: 0
   done: 0
@@ -4979,6 +4982,34 @@ PrefabInstance:
     - target: {fileID: 2458488989152370956, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370957, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370957, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370957, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370957, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370957, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370957, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458488989152370957, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23473f911a8fd0d4ca9c4b07d7262c50, type: 3}
