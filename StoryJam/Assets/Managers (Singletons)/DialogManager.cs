@@ -22,7 +22,7 @@ public class DialogManager : MonoBehaviour
 		// DontDestroyOnLoad(this.gameObject);
 	}
 
-	#endregion
+    #endregion
 
 	private void Start()
 	{
@@ -41,6 +41,7 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 	public TextMeshProUGUI textBox;
+    //public TMP_Text text;
 
 	public Canvas choiceScreen;
 	public Canvas[] endingScreens;
@@ -55,12 +56,22 @@ public class DialogManager : MonoBehaviour
 
 	private bool beenScared;
 
-	public void StartDialog(DialogData data)
+    bool typing;
+    const string kAlphaCode = "<color=#00000000>";
+    const float kMaxTextTime = 0.1f;
+    public static int textSpeed = 2;
+    public static int textSpeedFast = 30;
+    int currentTextSpeed;
+    private string currentText = "";
+
+    public void StartDialog(DialogData data)
 	{
         currentDialogData = data;
 		ToggleDialog();
-		textBox.text = data.dialog[0];
-		textindex = 0;
+		//textBox.text = data.dialog[0];
+        currentText = data.dialog[0];
+        StartCoroutine(DisplayText());
+        textindex = 0;
 
         if (playing == false)
         {
@@ -102,57 +113,52 @@ public class DialogManager : MonoBehaviour
 		if (textindex == 0)
 		{
 			textindex++;
-			/*for(int i = currentDialogData.conditionsNeeded.Length - 1 ; i > 0 ; i--)
-			{
-				if(currentDialogData.conditionsNeeded[i] != goal.NONE)
-				{
-					textindex = i;
-					break;
-				}
-			}
-			if(textindex == 0)
-			{
-				textindex++;
-			}*/
 		}
 	}
 
 	public void NextDialog()
 	{
-		if(textindex < currentDialogData.conditionsNeeded.Length)
-		{
-			textBox.text = currentDialogData.dialog[textindex];
-		}
-		else
-		{
-			EndDialog();
-			return;
-		}
-
-		if(currentDialogData.conditionsToUpdate[textindex] != goalIndex.NONE)
-		{
-			GlobalData.current[(int)currentDialogData.conditionsToUpdate[textindex]] += 1;
-		}
-
-		if(textindex == currentDialogData.conditionsNeeded.Length)
-		{
-			EndDialog();
-			return;
-		}
-
-		if(GlobalData.current[(int)Enum.Parse(typeof(goalIndex), currentDialogData.conditionsNeeded[textindex].ToString())] < (int)currentDialogData.conditionsNeeded[textindex])
-		{
-			EndDialog();
-			return;
-		}
-		else
-		{
-            if (playing == false)
+        currentTextSpeed = textSpeedFast;
+        if (typing == false)
+        {
+            Close();
+            if (textindex < currentDialogData.conditionsNeeded.Length)
             {
-                StartCoroutine("playVoice");
+                //textBox.text = currentDialogData.dialog[textindex];
+                currentText = currentDialogData.dialog[textindex];
+                StartCoroutine(DisplayText());
             }
-            textindex++;
-		}
+            else
+            {
+                EndDialog();
+                return;
+            }
+
+            if (currentDialogData.conditionsToUpdate[textindex] != goalIndex.NONE)
+            {
+                GlobalData.current[(int)currentDialogData.conditionsToUpdate[textindex]] += 1;
+            }
+
+            if (textindex == currentDialogData.conditionsNeeded.Length)
+            {
+                EndDialog();
+                return;
+            }
+
+            if (GlobalData.current[(int)Enum.Parse(typeof(goalIndex), currentDialogData.conditionsNeeded[textindex].ToString())] < (int)currentDialogData.conditionsNeeded[textindex])
+            {
+                EndDialog();
+                return;
+            }
+            else
+            {
+                if (playing == false)
+                {
+                    StartCoroutine("playVoice");
+                }
+                textindex++;
+            }
+        }
 	}
 
 	private bool madeChoice;
@@ -166,7 +172,6 @@ public class DialogManager : MonoBehaviour
 		}
 		else if(textindex == currentDialogData.conditionsNeeded.Length - 1)
 		{
-			//currentDialogData.done = true;
 			ToggleDialog();
 		}
 		else
@@ -209,6 +214,18 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 
+    public void Show(string text)
+    {
+        currentText = text;
+        StartCoroutine(DisplayText());
+    }
+
+    public void Close()
+    {
+        StopAllCoroutines();
+    }
+    
+
     IEnumerator playVoice()
     {
         playing = true;
@@ -221,13 +238,31 @@ public class DialogManager : MonoBehaviour
         playing = false;
     }
 
-    /*
-    private void PlayRandomVoice()
+    private IEnumerator DisplayText()
     {
-        // Find the audiomanager, look in the dialogdata for list of voices saved as strings, randomize voice using length of list
-        AudioManager.Instance.PlayAudio(currentDialogData.voices[UnityEngine.Random.Range(0, currentDialogData.voices.Length)]);
+        currentTextSpeed = textSpeed;
+
+        string originalText = currentText;
+        string displayedText = "";
+        int alphaIndex = 0;
+
+        foreach (char c in currentText.ToCharArray())
+        {
+            typing = true;
+
+            alphaIndex++;
+            textBox.text = originalText;
+            displayedText = textBox.text.Insert(alphaIndex, kAlphaCode);
+            textBox.text = displayedText;
+            textBox.text += c;
+
+            yield return new WaitForSecondsRealtime(kMaxTextTime / currentTextSpeed);
+
+            typing = false;
+        }
+
+        yield return null;
     }
-    */
 
     #region Shitty old stuff
     /*
