@@ -4722,8 +4722,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You were sacrificed to by the command of the mother and the hands of the
-    children of the order
+  m_text: The children of the order sacrificed you by the command of the mother.
+    You join the other inspectors at the deepest part of the abyss. Never to see
+    the light of day again.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6786,9 +6787,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You joined the Mother and her order. Your life will continue beneath the
-    surface, where your new purpose is to understand the mystical gemstones so that
-    you can unlock its power and build a new, stronger human race
+  m_text: You join the Mother and her order. Your life continues beneath the surface,
+    where your new purpose is to understand the mystical gemstones so that you can
+    unlock its power and build a new, stronger human race
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

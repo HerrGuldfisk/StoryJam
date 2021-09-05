@@ -105,6 +105,8 @@ public class RoomManager : MonoBehaviour
 		RoomChanged.Invoke();
 	}
 
+	public bool stoneIsRemoved;
+
 	private void RoomChange()
 	{
 		if (currentSceneId == 9)
@@ -119,9 +121,13 @@ public class RoomManager : MonoBehaviour
 		{
 			dialogHolder[1].RunAction();
 		}
-		else if (currentSceneId == 5 && GlobalData.current[4] >= 4)
+		else if (currentSceneId == 7)
 		{
-			ChangeRoom(5, "steps");
+			stoneIsRemoved = true;
+		}
+		else if (currentSceneId == 5 && GlobalData.current[4] >= 4 && stoneIsRemoved)
+		{
+			ChangeRoom(7, "steps");
 		}
 	}
 
