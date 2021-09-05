@@ -35,7 +35,9 @@ public class RoomManager : MonoBehaviour
 
     bool playingTransitionSound = false;
     bool playingCurrentMusic = false;
-    bool playNext;
+    bool playNext = true;
+
+    Queue<string> myQueue = new Queue<string>();
 
 	private UnityEvent RoomChanged = new UnityEvent();
 	public List<DialogData> dialogHolder = new List<DialogData>();
@@ -45,12 +47,13 @@ public class RoomManager : MonoBehaviour
 		RoomChanged.AddListener(RoomChange);
 	}
 
-
 	public void ChangeRoom(int id, string soundEffect)
 	{
 		// Add some type of transition animation?
 
 		currentSceneId = id;
+
+        StopCoroutine(playCurrentMusic());
 
         if (playingTransitionSound == false)
         {
@@ -67,6 +70,26 @@ public class RoomManager : MonoBehaviour
             StartCoroutine("playTransitionSound");
         }
 
+        if (id < 4 && !myQueue.Contains(musicLoops[0]))
+        {
+            myQueue.Enqueue(musicLoops[0]);
+        }
+        else if (id < 12 && !myQueue.Contains(musicLoops[1]))
+        {
+            myQueue.Enqueue(musicLoops[1]);
+        }
+        else if (id < 17 && !myQueue.Contains(musicLoops[2]))
+        {
+            myQueue.Enqueue(musicLoops[2]);
+        }
+
+        if (myQueue.Count > 1 || playNext == true)
+        {
+            playNext = false;
+            StartCoroutine(playCurrentMusic());
+        }
+
+        /*
         if (playingCurrentMusic == false)
         {
             if (id < 3)
@@ -98,7 +121,7 @@ public class RoomManager : MonoBehaviour
             }
 
             StartCoroutine(playCurrentMusic(playNext));
-        }
+        }*/
 
         // Add check if id exists
         Camera.main.transform.position = new Vector3(id * 25, 0, -10);
@@ -141,6 +164,7 @@ public class RoomManager : MonoBehaviour
         playingTransitionSound = false;
     }
 
+    /*
     IEnumerator playCurrentMusic(bool playNext)
     {
         playingCurrentMusic = true;
@@ -156,5 +180,20 @@ public class RoomManager : MonoBehaviour
         }
 
         playingCurrentMusic = false;
+    }
+    */
+
+    IEnumerator playCurrentMusic()
+    {
+        currentMusic = myQueue.Dequeue();
+
+        AudioManager.Instance.PlayAudio(currentMusic, true);
+        yield return new WaitForSecondsRealtime(AudioManager.Instance.GetAudioSource(currentMusic).clip.length);
+
+        if (myQueue.Count > 0)
+        {
+            AudioManager.Instance.GetAudioSource(currentMusic).Stop();
+            AudioManager.Instance.PlayAudio(myQueue.Dequeue(), true);
+        }
     }
 }
