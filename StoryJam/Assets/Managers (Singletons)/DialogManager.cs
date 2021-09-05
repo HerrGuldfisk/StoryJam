@@ -55,6 +55,7 @@ public class DialogManager : MonoBehaviour
     private string voice;
 
 	private bool beenScared;
+	private bool talkForeman;
 
     bool typing;
     const string kAlphaCode = "<color=#00000000>";
@@ -190,6 +191,13 @@ public class DialogManager : MonoBehaviour
 		{
 			madeChoice = true;
 			choiceScreen.gameObject.SetActive(true);
+			// choiceScreen.GetComponent<DeactivateCanvases>().canvases[0].gameObject.SetActive(true);
+		}
+
+		if (GlobalData.current[1] >= 1 && talkForeman == false)
+		{
+			talkForeman = true;
+			RoomManager.Instance.ChangeRoom(0, "steps");
 			// choiceScreen.GetComponent<DeactivateCanvases>().canvases[0].gameObject.SetActive(true);
 		}
 
