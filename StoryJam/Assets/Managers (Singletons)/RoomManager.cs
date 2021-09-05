@@ -141,6 +141,7 @@ public class RoomManager : MonoBehaviour
 
         AudioManager.Instance.PlayAudio(currentMusic, true);
         yield return new WaitForSecondsRealtime(AudioManager.Instance.GetAudioSource(currentMusic).clip.length);
+
         if (playNext == true)
         {
             AudioManager.Instance.GetAudioSource(currentMusic).Stop();

@@ -231,7 +231,8 @@ public class DialogManager : MonoBehaviour
 
     public void Close()
     {
-        StopAllCoroutines();
+        //StopAllCoroutines();
+        StopCoroutine(DisplayText());
     }
 
 
