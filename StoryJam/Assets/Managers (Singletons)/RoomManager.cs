@@ -119,6 +119,10 @@ public class RoomManager : MonoBehaviour
 		{
 			dialogHolder[1].RunAction();
 		}
+		else if (currentSceneId == 5 && GlobalData.current[4] >= 4)
+		{
+			ChangeRoom(5, "steps");
+		}
 	}
 
 	IEnumerator playTransitionSound()
