@@ -423,9 +423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'Juan: Howdy chap! You sure you wanna descend the mines in that uniform of yours?'
-  - 'Juan: Well I aint gonna stop thou mate, just lemme get my screwdriver and I''ll
-    get to work on the elevator'
+  - Howdy chap! You sure you wanna descend the mines in that uniform of yours?
+  - Well I aint gonna stop ye mate, here take my me entry pass. Should bring ya down
+    to the lower levels.
   defaultMessage: 
   conditionsNeeded: 0000000000000000
   conditionsToUpdate: 0000000003000000
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 216433132}
   - component: {fileID: 216433131}
   m_Layer: 0
-  m_Name: Passage->3
+  m_Name: Passage->2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefd36b5cefcc354a96ed8172a1adb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomId: 3
+  roomId: 2
   conditions: 00000000
   soundEffect: 
 --- !u!61 &216433132
@@ -739,6 +739,7 @@ Transform:
   - {fileID: 1160586984}
   - {fileID: 1130277354}
   - {fileID: 344405344}
+  - {fileID: 1220578532}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1361,11 +1362,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'Foreman: Good day detective, thank you for being here so quick.'
-  - 'Foreman: My workers at the deeper levels of the mines have stopped working for
-    some reason. I need your investigative expertise to find out what is happening.'
-  - 'Foreman: Sadly, I cannot go down there myself, as I have to hold position on
-    the surface. It comes with the job of being the manager you know.'
+  - Good day detective, thank you for being here so quick.
+  - My workers at the deeper levels of the mines have stopped working for some reason.
+    I need your investigative expertise to find out what is happening.
+  - Sadly, I cannot go down there myself, as I have to hold position on the surface.
+    It comes with the job of being the manager you know.
   defaultMessage: 
   conditionsNeeded: 000000000000000000000000
   conditionsToUpdate: 000000000000000001000000
@@ -1892,28 +1893,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'Mother: Hello there, mr "inspector"'
-  - 'Mother: I assume Gunther sent you here to investigate what is going on with
-    the deliveries'
-  - 'Mother: you are not the first one to get that mission you know'
-  - 'Mother: And i''m sorry to tell you that I cannot let you return to the surface'
-  - 'Mother: I''m sure you understand that we wouldn''t want anyone up there to know
-    about the things we are doing down here'
-  - 'Mother: We have a little paradise here that we wouldn''t want anyone to ruin'
-  - 'Mother: You see, the gemstones down here carry an energy that the world is not
-    ready for yet'
-  - 'Mother: We are slowly learning its powers, and how we can use it to become stronger,
-    healthier, and happier'
-  - 'Mother: But it must stay a secret for now'
-  - 'Mother: ...'
-  - 'Mother: I will give you a choice...'
-  - 'Mother: Join us, and take part in our journey towards uncovering the secret
-    powers of these gems!'
-  - 'Mother: Down here, you can thrive and become the ultimate version of yourself'
-  - 'Mother: Refuse, however, and you leave us no choice but to stop you in any attempt
-    to reach back to the surface'
-  - 'Mother: What will it be?'
-  - 'Mother: The choice is yours, inspector'
+  - Hello there, mr "inspector"
+  - I assume Gunther sent you here to investigate what is going on with the deliveries
+  - you are not the first one to get that mission you know
+  - And i'm sorry to tell you that I cannot let you return to the surface
+  - I'm sure you understand that we wouldn't want anyone up there to know about the
+    things we are doing down here
+  - We have a little paradise here that we wouldn't want anyone to ruin
+  - You see, the gemstones down here carry an energy that the world is not ready
+    for yet
+  - We are slowly learning its powers, and how we can use it to become stronger,
+    healthier, and happier
+  - But it must stay a secret for now
+  - ...
+  - I will give you a choice...
+  - Join us, and take part in our journey towards uncovering the secret powers of
+    these gems!
+  - Down here, you can thrive and become the ultimate version of yourself
+  - Refuse, however, and you leave us no choice but to stop you in any attempt to
+    reach back to the surface
+  - What will it be?
+  - The choice is yours, inspector
   defaultMessage: 
   conditionsNeeded: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   conditionsToUpdate: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000
@@ -1997,10 +1997,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34abfa2fbe8c18246b96a17dc487e57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: []
+  dialog:
+  - I welcome you...
+  - ..to the order!
+  - Down here, you will become part of exploring the power or the gems
+  - Once we unlock its power, we will become stronger that anyone thought possible
+  - Together, we shall form a new humanity!!!
   defaultMessage: 
-  conditionsNeeded: 
-  conditionsToUpdate: 
+  conditionsNeeded: 0000000000000000000000000000000000000000
+  conditionsToUpdate: 0000000000000000000000000000000000000000
   UnmetCondition: 0
   voices: []
   startIndex: 0
@@ -2706,11 +2711,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'left person: you have betrayed the trust of the mother, for this you must pay'
-  - 'right person: I''m sorry I have to do this Ricky, but your betrayal leaves me
-    no choice'
-  - 'Ricky: Oh my lord... Please! I can explain!'
-  - 'right person: goodbye..'
+  - you have betrayed the trust of the mother, for this you must pay
+  - I'm sorry I have to do this Ricky, but your betrayal leaves me no choice
+  - Oh my lord... Please! I can explain!
+  - goodbye..
   - I have to get out of here! Better turn back towards the entrance
   defaultMessage: 
   conditionsNeeded: 0000000000000000000000000000000000000000
@@ -3377,6 +3381,93 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1220578531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1220578532}
+  - component: {fileID: 1220578534}
+  - component: {fileID: 1220578533}
+  m_Layer: 0
+  m_Name: Worker
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1220578532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220578531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.07, y: 4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227345935}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1220578533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220578531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34abfa2fbe8c18246b96a17dc487e57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+  - Huh, who are you? I usually don't see people without miners clothing in here.
+  - The manager sent you to examine the work morale on the deeper levels?
+  - I bet that coward had some excuse why he don't want to go down there himself.
+    I assume he left out the part where he's afraid of the dark
+  - Nonetheless, me and my coworker on this floor have been noticing the decline
+    aswell. You should seek him out in the tunnels and see if he can fix the elevator
+    which is currently out of service.
+  defaultMessage: 
+  conditionsNeeded: 00000000000000000000000000000000
+  conditionsToUpdate: 00000000000000000000000000000000
+  UnmetCondition: 0
+  voices: []
+  startIndex: 0
+  currentIndex: 0
+  done: 0
+  show: 
+--- !u!61 &1220578534
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220578531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1283870226
 GameObject:
   m_ObjectHideFlags: 0
@@ -3700,8 +3791,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Join
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6a8fa628b0e87ac47b05403a72b8dd3f, type: 2}
+  m_sharedMaterial: {fileID: 836699315055583141, guid: 6a8fa628b0e87ac47b05403a72b8dd3f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4189,11 +4280,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'Mother: So, true to your word towards that coward Gunther'
-  - 'Mother: You truly are an idiot, inspector'
-  - 'Mother: There is no way you can escape this place'
-  - 'Mother: Children of the order, I summon you to sacrifice this criminal, who
-    refuses to become part of the new humanity!'
+  - So, true to your word towards that coward Gunther
+  - You truly are an idiot, inspector
+  - There is no way you can escape this place
+  - Children of the order, I summon you to sacrifice this criminal, who refuses to
+    become part of the new humanity!
   defaultMessage: 
   conditionsNeeded: 00000000000000000000000000000000
   conditionsToUpdate: 00000000000000000000000000000000
@@ -4989,18 +5080,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'Helge: So Gunther''s having problem with the deliveries from the deeper floors?'
-  - 'Helge: Heh.. that''s not the first time he''s complained.'
-  - 'Helge: I''m not the person to blame for the slacking deliveries though.'
-  - 'Helge: You see that pickaxe behind me? That''s still warm from my hard work
-    with it'
-  - 'Helge: You look dedicated to your mission though... If you must proceed, I''m
-    not going to stop you'
-  - 'Helge: There is a secret pathway behind the rock in the previous room that will
-    take you to an even deeper level of the mine'
-  - 'Helge: The deeper you get, the more you will understand. The prescence of our
-    mothers core is an remarkable experience I tell you'
-  - 'Helge: And if you see Gunther, tell him to SCRAM!'
+  - So Gunther's having problem with the deliveries from the deeper floors?
+  - Heh.. that's not the first time he's complained.
+  - I'm not the person to blame for the slacking deliveries though.
+  - You see that pickaxe behind me? That's still warm from my hard work with it
+  - You look dedicated to your mission though... If you must proceed, I'm not going
+    to stop you
+  - There is a secret pathway behind the rock in the previous room that will take
+    you to an even deeper level of the mine
+  - The deeper you get, the more you will understand. The prescence of our mothers
+    core is an remarkable experience I tell you
+  - And if you see Gunther, tell him to SCRAM!
   defaultMessage: 
   conditionsNeeded: 0000000000000000000000000000000000000000000000000000000000000000
   conditionsToUpdate: 0000000000000000000000000000000000000000000000000000000004000000
@@ -5098,8 +5188,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Refuse
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6a8fa628b0e87ac47b05403a72b8dd3f, type: 2}
+  m_sharedMaterial: {fileID: 836699315055583141, guid: 6a8fa628b0e87ac47b05403a72b8dd3f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5218,19 +5308,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'Piere: Have you seen Rick?'
-  - 'Piere: Wait, who are you?'
-  - 'Piere: Oh, you are from the surface?'
-  - 'Piere: Please mister, have you met a worker named Ricky?'
-  - 'Piere: I don''t know where he is'
-  - 'Piere: If you see him, please tell I that I am looking for him!'
-  - 'Piere: Oh my... What have they done to poor Ricky...'
-  - 'Piere: He was my best friend in this cave... The mother has gone too far this
-    time...'
-  - 'Piere: Judging by the mother latest decision this place is not safe for you.
-    Quick you must flee!'
-  - 'Piere: Oh, the entrance is blocked? SHIT!'
-  - 'Piere: Well then I guess there is only one option'
+  - Have you seen Rick?
+  - Wait, who are you?
+  - Oh, you are from the surface?
+  - Please mister, have you met a worker named Ricky?
+  - I don't know where he is
+  - If you see him, please tell I that I am looking for him!
+  - Oh my... What have they done to poor Ricky...
+  - He was my best friend in this cave... The mother has gone too far this time...
+  - Judging by the mother latest decision this place is not safe for you. Quick you
+    must flee!
+  - Oh, the entrance is blocked? SHIT!
+  - Well then I guess there is only one option
   - none
   defaultMessage: 
   conditionsNeeded: 000000000000000000000000000000000000000000000000050000000000000000000000000000000000000007000000

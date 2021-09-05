@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using System;
 
 public class PointAndClick : MonoBehaviour
 {
@@ -56,7 +57,22 @@ public class PointAndClick : MonoBehaviour
 		{
 			if(hit.collider.gameObject.tag == "Interactable" || hit.collider.gameObject.tag == "PickUp")
 			{
-				SetCursor(false);
+				if (hit.collider.gameObject.GetComponent<ChangeRoom>())
+				{
+					ChangeRoom tempObject = hit.collider.gameObject.GetComponent<ChangeRoom>();
+					for (int i = 0; i < tempObject.conditions.Count; i++)
+					{
+						if ((int)tempObject.conditions[i] > GlobalData.current[(int)Enum.Parse(typeof(goalIndex), tempObject.conditions[i].ToString())])
+						{
+							return;
+						}
+					}
+					SetCursor(false);
+				}
+				else
+				{
+					SetCursor(false);
+				}
 			}
 		}
 		else

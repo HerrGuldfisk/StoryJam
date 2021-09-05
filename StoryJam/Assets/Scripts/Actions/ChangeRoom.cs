@@ -7,11 +7,11 @@ public class ChangeRoom : Action
 {
 	[SerializeField] private int roomId;
 
-	[SerializeField] private List<goal> conditions;
+	[SerializeField] public List<goal> conditions;
 
     // TransitionSounds
     [SerializeField] public string soundEffect;
-    
+
     public override void RunAction()
 	{
 		for (int i = 0; i < conditions.Count; i++)
