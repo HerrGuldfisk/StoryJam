@@ -5218,8 +5218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - 'Piere: Good day'
-  - 'Piere: Who are you?'
+  - 'Piere: Have you seen Rick?'
+  - 'Piere: Wait, who are you?'
   - 'Piere: Oh, you are from the surface?'
   - 'Piere: Please mister, have you met a worker named Ricky?'
   - 'Piere: I don''t know where he is'
