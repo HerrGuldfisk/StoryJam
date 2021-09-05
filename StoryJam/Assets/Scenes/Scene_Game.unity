@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 9
   conditions: 00000000
-  soundEffect: 
+  soundEffect: machine
 --- !u!61 &47693377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 4
   conditions: 03000000
-  soundEffect: 
+  soundEffect: elevator
 --- !u!61 &344405346
 BoxCollider2D:
   m_ObjectHideFlags: 0
