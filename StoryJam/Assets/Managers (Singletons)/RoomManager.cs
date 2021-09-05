@@ -53,7 +53,7 @@ public class RoomManager : MonoBehaviour
 
 		currentSceneId = id;
 
-        StopCoroutine(playCurrentMusic());
+        //StopCoroutine(playCurrentMusic());
 
         if (playingTransitionSound == false)
         {
@@ -70,24 +70,39 @@ public class RoomManager : MonoBehaviour
             StartCoroutine("playTransitionSound");
         }
 
-        if (id < 4 && !myQueue.Contains(musicLoops[0]))
+        if (id == 1)// && !myQueue.Contains(musicLoops[0]))
         {
-            myQueue.Enqueue(musicLoops[0]);
+            //myQueue.Enqueue(musicLoops[0]);
+            //AudioManager.Instance.GetAudioSource(musicLoops[0]).Stop();
+            AudioManager.Instance.PlayAudio(musicLoops[0], true);
         }
-        else if (id < 12 && !myQueue.Contains(musicLoops[1]))
+        else if (id == 4)// && !myQueue.Contains(musicLoops[1]))
         {
-            myQueue.Enqueue(musicLoops[1]);
+            //myQueue.Enqueue(musicLoops[1]);
+            AudioManager.Instance.GetAudioSource(musicLoops[0]).Stop();
+            AudioManager.Instance.PlayAudio(musicLoops[1], true);
         }
-        else if (id < 17 && !myQueue.Contains(musicLoops[2]))
+        else if (id == 9)// && !myQueue.Contains(musicLoops[2]))
         {
-            myQueue.Enqueue(musicLoops[2]);
+            AudioManager.Instance.GetAudioSource(musicLoops[1]).Stop();
+            AudioManager.Instance.PlayAudio(musicLoops[2], true);
+        }
+        else if (id == 12)
+        {
+            AudioManager.Instance.GetAudioSource(musicLoops[2]).Stop();
+            AudioManager.Instance.PlayAudio(musicLoops[3], true);
+        }
+        else if (id == 15)
+        {
+            AudioManager.Instance.GetAudioSource(musicLoops[3]).Stop();
+            AudioManager.Instance.PlayAudio(musicLoops[4], true);
         }
 
-        if (myQueue.Count > 1 || playNext == true)
+        /*if (myQueue.Count > 1 || playNext == true)
         {
             playNext = false;
             StartCoroutine(playCurrentMusic());
-        }
+        }*/
 
         /*
         if (playingCurrentMusic == false)
