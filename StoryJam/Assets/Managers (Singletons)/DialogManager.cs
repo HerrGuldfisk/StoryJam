@@ -184,7 +184,7 @@ public class DialogManager : MonoBehaviour
 		{
 			madeChoice = true;
 			choiceScreen.gameObject.SetActive(true);
-			choiceScreen.GetComponent<DeactivateCanvases>().canvases[0].gameObject.SetActive(true);
+			// choiceScreen.GetComponent<DeactivateCanvases>().canvases[0].gameObject.SetActive(true);
 		}
 
 		currentDialogData.gameObject.GetComponent<BoxCollider2D>().enabled = true;

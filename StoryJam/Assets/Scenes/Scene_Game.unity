@@ -494,7 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomId: 1
   conditions: 01000000
-  soundEffect: 
+  soundEffect: steps
 --- !u!61 &67845721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2232,12 +2232,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 696702349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefd36b5cefcc354a96ed8172a1adb3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 34abfa2fbe8c18246b96a17dc487e57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomId: 7
-  conditions: 00000000
-  soundEffect: 
+  dialog:
+  - Hmm something is blocking the way back
+  defaultMessage: 
+  conditionsNeeded: 00000000
+  conditionsToUpdate: 00000000
+  UnmetCondition: 0
+  voices: []
+  startIndex: 0
+  currentIndex: 0
+  done: 0
+  show: 
 --- !u!61 &696702352
 BoxCollider2D:
   m_ObjectHideFlags: 0
