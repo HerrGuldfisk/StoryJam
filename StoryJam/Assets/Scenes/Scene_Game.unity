@@ -2717,7 +2717,7 @@ MonoBehaviour:
   conditionsToUpdate: 0000000000000000000000000000000005000000
   UnmetCondition: 0
   voices:
-  - jojo
+  - 
   startIndex: 0
   currentIndex: 0
   done: 0
