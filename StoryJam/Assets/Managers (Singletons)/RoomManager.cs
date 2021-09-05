@@ -111,6 +111,10 @@ public class RoomManager : MonoBehaviour
 		{
 			dialogHolder[0].RunAction();
 		}
+		else if (currentSceneId == 11)
+		{
+			dialogHolder[2].RunAction();
+		}
 		else if (currentSceneId == 15)
 		{
 			dialogHolder[1].RunAction();

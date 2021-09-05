@@ -66,6 +66,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(DialogData data)
 	{
+		Close();
         currentDialogData = data;
 		ToggleDialog();
 		//textBox.text = data.dialog[0];
@@ -224,7 +225,7 @@ public class DialogManager : MonoBehaviour
     {
         StopAllCoroutines();
     }
-    
+
 
     IEnumerator playVoice()
     {
